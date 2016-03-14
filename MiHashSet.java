@@ -75,6 +75,7 @@ public class MiHashSet
      */
     public void size()
     {
+        list.size();
     }
     
     /**
