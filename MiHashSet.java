@@ -25,7 +25,7 @@ public class MiHashSet
         {
             list.add(valor);
         }
-        return rep;
+        return !rep;
     }
     
     public void clear()
@@ -33,8 +33,9 @@ public class MiHashSet
         list.clear();
     }
     
-    public void contains(int elemento)
+    public boolean contains(int elemento)
     {
+        return list.contains(elemento);
     }
     
     public void isEmpty()
