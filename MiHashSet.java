@@ -1,4 +1,4 @@
-
+import java.util.Iterator;
 /**
  * Write a description of class MiHashSet here.
  * 
@@ -76,6 +76,26 @@ public class MiHashSet
     public void size()
     {
         list.size();
+    }
+    
+    /**
+     * devuelve una cadena conteniendo todos los elementos del conjunto separados por comas y entre corchetes.
+     */
+    public String toString()
+    {
+        int index = 0;
+        String lista = new String();
+        
+        while(list.size()>= index)
+        {
+            lista = lista + "[" + list.get(index) + "]";
+            if (list.size() > index)
+            {
+                lista = lista + ", ";
+            }
+            index++;
+        }
+        return lista;
     }
     
     /**
