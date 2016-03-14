@@ -7,27 +7,46 @@
  */
 public class MiHashSet
 {
-    // instance variables - replace the example below with your own
-    private int x;
+    // Array de valores
+    private ArrayListInt list;
 
     /**
      * Constructor for objects of class MiHashSet
      */
     public MiHashSet()
     {
-        // initialise instance variables
-        x = 0;
+        list = new ArrayListInt();
     }
 
-    /**
-     * An example of a method - replace this comment with your own
-     * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
-     */
-    public int sampleMethod(int y)
+    public void add(int valor)
     {
-        // put your code here
-        return x + y;
+        if (list.contains(valor) == false)
+        {
+            list.add(valor);
+        }
+    }
+    
+    public void clear()
+    {
+    }
+    
+    public void contains(int elemento)
+    {
+    }
+    
+    public void isEmpty()
+    {
+    }
+    
+    public void remove(int elemento)
+    {
+    }
+    
+    public void size()
+    {
+    }
+    
+    public void equals(MiHashSet otroConjunto)
+    {
     }
 }
