@@ -28,6 +28,7 @@ public class MiHashSet
     
     public void clear()
     {
+        list.clear();
     }
     
     public void contains(int elemento)
