@@ -93,6 +93,10 @@ public class MiHashSet
             {
                 lista = lista + ", ";
             }
+            else
+            {
+                lista = lista + ".";
+            }
             index++;
         }
         return lista;
@@ -101,7 +105,18 @@ public class MiHashSet
     /**
      * devuelve verdadero si el parámetro es igual al conjunto sobre el que se invoca y falso en otro caso.
      */
-    public void equals(MiHashSet otroConjunto)
+    public boolean equals(MiHashSet otroConjunto)
     {
+        boolean same = false;
+        int index = 0;
+        while(list.size() >= index && !same)
+        {
+            if (otroConjunto.contains(list.get(index)))
+            {
+                index++;
+                same = true;
+            }
+        }
+        return same;
     }
 }
