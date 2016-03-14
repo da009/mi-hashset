@@ -18,12 +18,14 @@ public class MiHashSet
         list = new ArrayListInt();
     }
 
-    public void add(int valor)
+    public boolean add(int valor)
     {
-        if (list.contains(valor) == false)
+        boolean rep = list.contains(valor);
+        if (rep == false)
         {
             list.add(valor);
         }
+        return rep;
     }
     
     public void clear()
