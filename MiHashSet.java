@@ -73,9 +73,9 @@ public class MiHashSet
     /**
      * devuelve el número de elementos del conjunto.
      */
-    public void size()
+    public int size()
     {
-        list.size();
+        return list.size();
     }
     
     /**
@@ -84,22 +84,21 @@ public class MiHashSet
     public String toString()
     {
         int index = 0;
-        String lista = new String();
+        String lista = "[";
         
-        while(list.size()>= index)
+        while(size() > index)
         {
-            lista = lista + "[" + list.get(index) + "]";
-            if (list.size() > index)
+            if (index == size()-1)
             {
-                lista = lista + ", ";
+                lista = lista + (list.get(index));
             }
             else
             {
-                lista = lista + ".";
+                lista = lista + (list.get(index) + ", ");
             }
             index++;
         }
-        return lista;
+        return lista + "]";
     }
     
     /**
@@ -109,7 +108,7 @@ public class MiHashSet
     {
         boolean same = false;
         int index = 0;
-        while(list.size() >= index && !same)
+        while(size() >= index && !same)
         {
             if (otroConjunto.contains(list.get(index)))
             {
