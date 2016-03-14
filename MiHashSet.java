@@ -40,6 +40,7 @@ public class MiHashSet
     
     public void isEmpty()
     {
+        list.isEmpty();
     }
     
     public void remove(int elemento)
